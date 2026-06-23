@@ -1,0 +1,47 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ayan Malik — Network, Cloud and Security Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#060B14"/>
+      <stop offset="1" stop-color="#0A1626"/>
+    </linearGradient>
+    <radialGradient id="rg" cx="78%" cy="38%" r="55%">
+      <stop offset="0" stop-color="#4DA3FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#4DA3FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.03"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#rg)"/>
+
+  <!-- particle tunnel hint (right side) -->
+  <g stroke="#4DA3FF" stroke-opacity="0.5" fill="none">
+    <ellipse cx="960" cy="300" rx="60" ry="60"/>
+    <ellipse cx="960" cy="300" rx="120" ry="118" stroke-opacity="0.32"/>
+    <ellipse cx="960" cy="300" rx="190" ry="186" stroke-opacity="0.18"/>
+    <ellipse cx="960" cy="300" rx="270" ry="262" stroke-opacity="0.08"/>
+  </g>
+  <g fill="#7CF5D0">
+    <circle cx="960" cy="240" r="3"/><circle cx="1020" cy="300" r="2.5"/>
+    <circle cx="900" cy="300" r="2.5"/><circle cx="960" cy="360" r="3"/>
+    <circle cx="1080" cy="300" r="2"/><circle cx="960" cy="180" r="2"/>
+  </g>
+
+  <!-- gold rule -->
+  <rect x="90" y="232" width="64" height="3" fill="#D49A3A"/>
+
+  <!-- eyebrow -->
+  <text x="90" y="212" font-family="'JetBrains Mono','Courier New',monospace" font-size="22" letter-spacing="6" fill="#6B8299">PORTFOLIO</text>
+
+  <!-- name -->
+  <text x="88" y="330" font-family="'Space Grotesk','Arial',sans-serif" font-size="104" font-weight="700" letter-spacing="-2" fill="#E6EDF6">Ayan Malik</text>
+
+  <!-- title -->
+  <text x="92" y="392" font-family="'JetBrains Mono','Courier New',monospace" font-size="28" letter-spacing="3" fill="#4DA3FF">NETWORK · CLOUD · SECURITY ENGINEER</text>
+
+  <!-- footer -->
+  <text x="92" y="556" font-family="'JetBrains Mono','Courier New',monospace" font-size="20" letter-spacing="2" fill="#6B8299">Cisco · AWS · SIEM &#160;&#160;|&#160;&#160; Darwin, NT, Australia</text>
+</svg>

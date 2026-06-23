@@ -1,0 +1,45 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OSINT Environmental Analysis System">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#060B14"/><stop offset="1" stop-color="#0A1626"/>
+    </linearGradient>
+    <radialGradient id="g3" cx="50%" cy="42%" r="55%">
+      <stop stop-color="#4DA3FF" stop-opacity="0.16"/><stop offset="1" stop-color="#4DA3FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg3)"/>
+  <rect width="1280" height="720" fill="url(#g3)"/>
+
+  <!-- graph edges -->
+  <g stroke="#4DA3FF" stroke-width="2" stroke-opacity="0.6">
+    <line x1="640" y1="290" x2="470" y2="200"/>
+    <line x1="640" y1="290" x2="820" y2="210"/>
+    <line x1="640" y1="290" x2="520" y2="420"/>
+    <line x1="640" y1="290" x2="780" y2="430"/>
+    <line x1="470" y1="200" x2="350" y2="330"/>
+    <line x1="820" y1="210" x2="930" y2="340"/>
+    <line x1="520" y1="420" x2="640" y2="500"/>
+    <line x1="780" y1="430" x2="640" y2="500"/>
+  </g>
+  <g stroke="#7CF5D0" stroke-width="1.6" stroke-opacity="0.4">
+    <line x1="470" y1="200" x2="820" y2="210"/>
+    <line x1="350" y1="330" x2="520" y2="420"/>
+    <line x1="930" y1="340" x2="780" y2="430"/>
+  </g>
+  <!-- nodes -->
+  <circle cx="640" cy="290" r="22" fill="#0A1626" stroke="#D49A3A" stroke-width="3"/>
+  <g fill="#0A1626">
+    <circle cx="470" cy="200" r="14" stroke="#4DA3FF" stroke-width="2.6"/>
+    <circle cx="820" cy="210" r="14" stroke="#4DA3FF" stroke-width="2.6"/>
+    <circle cx="350" cy="330" r="12" stroke="#7CF5D0" stroke-width="2.4"/>
+    <circle cx="930" cy="340" r="12" stroke="#7CF5D0" stroke-width="2.4"/>
+    <circle cx="520" cy="420" r="13" stroke="#4DA3FF" stroke-width="2.6"/>
+    <circle cx="780" cy="430" r="13" stroke="#4DA3FF" stroke-width="2.6"/>
+    <circle cx="640" cy="500" r="12" stroke="#7CF5D0" stroke-width="2.4"/>
+  </g>
+
+  <rect x="80" y="80" width="48" height="3" fill="#D49A3A"/>
+  <text x="80" y="68" font-family="'JetBrains Mono',monospace" font-size="20" letter-spacing="5" fill="#6B8299">PROJECT 03</text>
+  <text x="80" y="660" font-family="'Space Grotesk','Arial',sans-serif" font-size="48" font-weight="700" fill="#E6EDF6">OSINT Analysis System</text>
+  <text x="82" y="695" font-family="'JetBrains Mono',monospace" font-size="18" letter-spacing="2" fill="#4DA3FF">MongoDB · Neo4j · ACH · Graph DB</text>
+</svg>

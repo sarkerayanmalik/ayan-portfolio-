@@ -1,0 +1,36 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ayan Malik monogram">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#4DA3FF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#4DA3FF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="240" height="240" rx="0" fill="url(#glow)"/>
+
+  <!-- A strokes (network edges) -->
+  <g stroke="#4DA3FF" stroke-width="3.5" stroke-linecap="round" filter="url(#soft)">
+    <line x1="120" y1="46" x2="56" y2="196"/>
+    <line x1="120" y1="46" x2="184" y2="196"/>
+    <line x1="92" y1="150" x2="148" y2="150"/>
+  </g>
+
+  <!-- faint secondary connections -->
+  <g stroke="#7CF5D0" stroke-width="1.4" stroke-opacity="0.55" stroke-linecap="round">
+    <line x1="56" y1="196" x2="184" y2="196"/>
+    <line x1="92" y1="150" x2="120" y2="46"/>
+  </g>
+
+  <!-- nodes -->
+  <g>
+    <circle cx="120" cy="46" r="9" fill="#0A1626" stroke="#4DA3FF" stroke-width="3"/>
+    <circle cx="56" cy="196" r="8" fill="#0A1626" stroke="#4DA3FF" stroke-width="3"/>
+    <circle cx="184" cy="196" r="8" fill="#0A1626" stroke="#4DA3FF" stroke-width="3"/>
+    <circle cx="92" cy="150" r="7" fill="#0A1626" stroke="#7CF5D0" stroke-width="2.6"/>
+    <circle cx="148" cy="150" r="7" fill="#0A1626" stroke="#D49A3A" stroke-width="2.6"/>
+  </g>
+</svg>
