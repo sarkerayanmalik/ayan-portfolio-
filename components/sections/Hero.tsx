@@ -24,11 +24,11 @@ export default function Hero() {
     <section
       ref={ref}
       id="home"
-      className="relative flex min-h-[100svh] flex-col items-center justify-center px-4 pb-16 pt-24 sm:pt-28"
+      className="relative flex min-h-[100svh] flex-col items-center pb-8 pt-24 sm:pt-28"
     >
       <motion.div
         style={{ y, opacity }}
-        className="relative z-10 flex w-full flex-col items-center px-4"
+        className="relative z-10 flex w-full flex-1 flex-col items-center justify-center px-4"
       >
         {/* soft radial backing — keeps the column legible over the tunnel */}
         <span
@@ -159,7 +159,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.9, duration: 1 }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-muted"
+        className="z-10 mt-6 flex flex-col items-center gap-2 text-muted"
       >
         <span className="font-mono text-[0.6rem] uppercase tracking-[0.3em]">
           Scroll
