@@ -258,6 +258,35 @@ body {
   }
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Per-node card entrances for the orbital timeline */
+@keyframes cardUp {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes cardPop {
+  from { opacity: 0; transform: scale(0.84); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes cardLeft {
+  from { opacity: 0; transform: translateX(-26px) rotate(-2deg); }
+  to   { opacity: 1; transform: translateX(0) rotate(0); }
+}
+@keyframes cardRight {
+  from { opacity: 0; transform: translateX(26px) rotate(2deg); }
+  to   { opacity: 1; transform: translateX(0) rotate(0); }
+}
+
 .hairline {
   height: 1px;
   background: linear-gradient(
