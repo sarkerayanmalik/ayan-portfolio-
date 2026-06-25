@@ -71,7 +71,7 @@ export default function Hero() {
             {/* orbiting network nodes */}
             <div
               aria-hidden
-              className="absolute -inset-[14px] rounded-full [backface-visibility:hidden] [transform:translateZ(0)] will-change-transform motion-safe:animate-[spin_18s_linear_infinite] motion-reduce:hidden"
+              className="absolute -inset-[14px] rounded-full motion-safe:animate-[spin_18s_linear_infinite] motion-reduce:hidden"
             >
               <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_12px_3px_rgba(77,163,255,0.75)]" />
               <span className="absolute bottom-[10%] right-[4%] h-2 w-2 rounded-full bg-accent-2 shadow-[0_0_12px_3px_rgba(124,245,208,0.6)]" />
