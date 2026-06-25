@@ -35,7 +35,7 @@ export default function Experience() {
                 {job.bullets.map((b, bi) => (
                   <li
                     key={bi}
-                    className="relative pl-6 text-[0.95rem] leading-relaxed text-text/80"
+                    className="relative pl-6 hyphens-auto text-justify text-[0.95rem] leading-relaxed text-text/80"
                   >
                     <span className="absolute left-0 top-0 font-mono text-accent">
                       ›

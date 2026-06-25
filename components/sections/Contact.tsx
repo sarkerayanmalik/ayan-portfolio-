@@ -35,7 +35,7 @@ export default function Contact() {
         />
 
         <Reveal delay={0.1}>
-          <p className="mt-6 max-w-xl text-[1.05rem] leading-relaxed text-text/75">
+          <p className="mt-6 max-w-xl hyphens-auto text-justify text-[1.05rem] leading-relaxed text-text/75">
             Open to entry-level roles in Network Support, Cloud Operations, or
             Cybersecurity. The fastest way to reach me is email.
           </p>
