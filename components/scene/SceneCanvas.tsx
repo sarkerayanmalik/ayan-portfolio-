@@ -11,25 +11,30 @@ type Tier = {
   count: number;
   bloom: boolean;
   sizeScale: number;
+  /** upper bound for the renderer's device-pixel-ratio */
+  maxDpr: number;
 };
 
 function detectTier(): Tier {
   if (typeof window === "undefined") {
-    return { count: 9000, bloom: true, sizeScale: 1 };
+    return { count: 9000, bloom: true, sizeScale: 1, maxDpr: 2 };
   }
   const w = window.innerWidth;
   const dpr = window.devicePixelRatio || 1;
   const lowPower = dpr < 1.3 && w >= 768;
 
   if (w < 768) {
-    // mobile budget: drastically reduced, bloom off
-    return { count: 2200, bloom: false, sizeScale: 0.95 };
+    // mobile budget: drastically reduced, bloom off, and the DPR is capped so
+    // the full-screen additive particle fill stays well inside the GPU budget —
+    // this keeps the compositor free so CSS animations (the portrait orbit ring)
+    // run perfectly smooth.
+    return { count: 2200, bloom: false, sizeScale: 0.95, maxDpr: 1.5 };
   }
   if (w < 1280) {
-    return { count: 4800, bloom: !lowPower, sizeScale: 1 };
+    return { count: 4800, bloom: !lowPower, sizeScale: 1, maxDpr: 1.75 };
   }
   // desktop, max cinematic
-  return { count: 7600, bloom: true, sizeScale: 1 };
+  return { count: 7600, bloom: true, sizeScale: 1, maxDpr: 2 };
 }
 
 /** Camera parallax sway tied to pointer + gentle scroll dolly. */
@@ -72,7 +77,7 @@ export default function SceneCanvas({ animate }: { animate: boolean }) {
   return (
     <Canvas
       frameloop={animate ? "always" : "demand"}
-      dpr={[1, 2]}
+      dpr={[1, tier.maxDpr]}
       gl={{
         antialias: false,
         alpha: true,

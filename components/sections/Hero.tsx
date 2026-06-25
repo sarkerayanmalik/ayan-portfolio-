@@ -24,7 +24,7 @@ export default function Hero() {
     <section
       ref={ref}
       id="home"
-      className="relative flex min-h-[100svh] flex-col items-center justify-center"
+      className="relative flex min-h-[100svh] flex-col items-center justify-center px-4 pb-16 pt-24 sm:pt-28"
     >
       <motion.div
         style={{ y, opacity }}
@@ -57,8 +57,8 @@ export default function Hero() {
 
           {/* ── Portrait with orbiting nodes + gradient ring ── */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.82, y: 14, filter: "blur(8px)" }}
-            animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, scale: 0.82, y: 14 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
             className="group relative mb-9 sm:mb-10"
           >
@@ -71,7 +71,7 @@ export default function Hero() {
             {/* orbiting network nodes */}
             <div
               aria-hidden
-              className="absolute -inset-[14px] rounded-full motion-safe:animate-[spin_18s_linear_infinite] motion-reduce:hidden"
+              className="absolute -inset-[14px] rounded-full [backface-visibility:hidden] [transform:translateZ(0)] will-change-transform motion-safe:animate-[spin_18s_linear_infinite] motion-reduce:hidden"
             >
               <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_12px_3px_rgba(77,163,255,0.75)]" />
               <span className="absolute bottom-[10%] right-[4%] h-2 w-2 rounded-full bg-accent-2 shadow-[0_0_12px_3px_rgba(124,245,208,0.6)]" />
