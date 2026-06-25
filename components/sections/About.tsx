@@ -13,7 +13,7 @@ export default function About() {
 
       <div className="mt-12 grid gap-12 md:grid-cols-[1.4fr_1fr] md:gap-16">
         <Reveal>
-          <p className="max-w-2xl hyphens-auto text-justify text-[clamp(1rem,1.4vw,1.18rem)] leading-[1.85] text-text/85">
+          <p className="max-w-2xl hyphens-auto text-left md:text-justify text-[clamp(1rem,1.4vw,1.18rem)] leading-[1.85] text-text/85">
             <Rich text={summaryRich} />
           </p>
         </Reveal>
