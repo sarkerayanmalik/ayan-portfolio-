@@ -46,7 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="mb-7 inline-flex items-center gap-2 rounded-full border border-accent-2/30 bg-accent-2/[0.06] px-3.5 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.24em] text-accent-2/90 backdrop-blur-sm"
+            className="mb-7 inline-flex items-center gap-2 rounded-full border border-accent-2/30 bg-[#0a1626]/55 px-3.5 py-1.5 font-mono text-[0.62rem] uppercase tracking-[0.24em] text-accent-2/90"
           >
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full rounded-full bg-accent-2 opacity-75 motion-safe:animate-ping" />
@@ -145,9 +145,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.3, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-5 text-balance text-center font-mono text-[clamp(0.72rem,2vw,1.05rem)] uppercase tracking-[0.2em] text-muted sm:tracking-[0.34em]"
+          className="mt-5 text-center"
         >
-          NETWORK · CLOUD · SECURITY ENGINEER
+          {/* inline-block + negative end margin cancels the trailing
+              letter-spacing so the tracked text stays optically centred in
+              Safari (which, unlike Chrome, keeps that trailing space). */}
+          <span className="inline-block text-balance font-mono text-[clamp(0.72rem,2vw,1.05rem)] uppercase tracking-[0.2em] text-muted [margin-inline-end:-0.2em] sm:tracking-[0.34em] sm:[margin-inline-end:-0.34em]">
+            NETWORK · CLOUD · SECURITY ENGINEER
+          </span>
         </motion.p>
       </motion.div>
 
