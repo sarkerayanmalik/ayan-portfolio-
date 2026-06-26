@@ -141,15 +141,14 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className="mt-9 h-px w-40 origin-center bg-gradient-to-r from-transparent via-accent/60 to-transparent sm:mt-11"
         />
-        <BlurText
-          as="p"
-          text="NETWORK · CLOUD · SECURITY ENGINEER"
-          trigger="mount"
-          animateBy="words"
-          stagger={0.09}
-          delay={1.35}
-          className="mt-5 text-center font-mono text-[clamp(0.72rem,2vw,1.05rem)] uppercase tracking-[0.34em] text-muted"
-        />
+        <motion.p
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1.3, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-5 text-balance text-center font-mono text-[clamp(0.72rem,2vw,1.05rem)] uppercase tracking-[0.2em] text-muted sm:tracking-[0.34em]"
+        >
+          NETWORK · CLOUD · SECURITY ENGINEER
+        </motion.p>
       </motion.div>
 
       {/* Scroll cue */}
