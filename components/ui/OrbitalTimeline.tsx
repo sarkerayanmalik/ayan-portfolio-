@@ -407,7 +407,7 @@ export default function OrbitalTimeline() {
                   ))}
                 </div>
 
-                <p className="mt-4 hyphens-auto text-left text-[0.85rem] leading-relaxed text-text/75">
+                <p className="mt-4 text-left text-[0.85rem] leading-relaxed text-text/75">
                   {active.desc}
                 </p>
 

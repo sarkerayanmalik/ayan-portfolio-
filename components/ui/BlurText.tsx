@@ -29,14 +29,15 @@ const container = (delay: number, stagger: number): Variants => ({
   },
 });
 
-// blur-to-sharp + directional fade
+// directional fade + rise. Uses only opacity + transform (compositor-friendly)
+// so per-letter reveals stay smooth on mobile — animating filter:blur across
+// dozens of glyphs was the cause of the text-load jank.
 const makeSegment = (from: "below" | "above"): Variants => ({
-  hidden: { opacity: 0, y: from === "above" ? "-0.55em" : "0.55em", filter: "blur(10px)" },
+  hidden: { opacity: 0, y: from === "above" ? "-0.5em" : "0.5em" },
   show: {
     opacity: 1,
     y: "0em",
-    filter: "blur(0px)",
-    transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
   },
 });
 
@@ -96,7 +97,7 @@ export default function BlurText({
               style={{
                 display: "inline-block",
                 whiteSpace: "pre",
-                willChange: "transform, filter",
+                willChange: "transform",
               }}
             >
               {word}
@@ -116,7 +117,7 @@ export default function BlurText({
                   className={segmentClassName}
                   style={{
                     display: "inline-block",
-                    willChange: "transform, filter",
+                    willChange: "transform",
                   }}
                 >
                   {char}
